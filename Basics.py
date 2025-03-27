@@ -218,3 +218,38 @@ print(temp)     #Output: 30
 #making a blank function, this will allow you to create a function that you will use later
 def show_name():
     pass
+
+
+#try and except block, useful if lets say user inputs a string instead of a number
+number = input('Enter a number: ')
+try:    #try block
+    print(10 + int(number))
+except: #except block
+    print('You inserted invalid input')
+
+
+
+#write and append to a file
+file = open("C:/Users/Alamin/Desktop/testfile.txt", 'w') #this will look for textfile in desktop and if not found will create one
+file.write("Hello world")   #write to file, every time the code runs it will overwrite everything of the file
+file.close()    #close the file, important otherwise it will keep the file open and you can't open it in another program
+
+file = open("C:/Users/Alamin/Desktop/testfile.txt", 'a') #similar to previous one but this will append to the file
+file.write('Hello world again.')   #this will be added after the content of the file and wont overrite
+file.close()    #close the file
+
+
+
+#creating dictionaries for mapping
+a = dict (one = 1, two = 2, three = 3)              #Output: {'one': 1, 'two': 2, 'three': 3}
+b = {'one': 1, 'two': 2, 'three': 3}                #Output: {'one': 1, 'two': 2, 'three': 3}
+c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))   #Output: {'one': 1, 'two': 2, 'three': 3}
+d = dict([('two', 2), ('one', 1), ('three', 3)])    #Output: {'two': 2, 'one': 1, 'three': 3}
+e = dict({'three': 3, 'one': 1, 'two': 2})          #Output: {'three': 3, 'one': 1, 'two': 2}
+a == b == c == d == e                               #Output: True
+
+def dict():
+    a = dict (one = 1, two = 2, three = 3)
+    return a
+print(dict['one'])  #Output: 1
+print(dict['two'])  #Output: 2
